@@ -146,42 +146,6 @@ API docs: http://localhost:8000/docs
 
 ---
 
-## Development Phases
-
-### ✅ Phase 1: Data Collection (Current)
-
-- [x] Webcam capture service
-- [x] Browser context logger
-- [x] Self-label shortcuts
-- [x] SQLite database
-- [ ] Collect 1 week of labeled data
-
-### Phase 2: Feature Pipeline
-
-- [ ] Compute 30s rolling window features
-- [ ] One-hot encode top 30 domains
-- [ ] Generate features.csv with ~2,000 rows
-
-### Phase 3: Model Training
-
-- [ ] Baseline heuristic classifier
-- [ ] Train LightGBM model
-- [ ] Achieve ROC-AUC ≥0.80
-
-### Phase 4: Real-Time Stack
-
-- [ ] Electron desktop app
-- [ ] Screen blur overlay
-- [ ] Tray icon (green/red focus indicator)
-
-### Phase 5: Polish
-
-- [ ] Cross-platform builds (dmg, exe, AppImage)
-- [ ] Settings UI
-- [ ] Daily focus report CSV export
-
----
-
 ## Database Schema
 
 **gaze_logs:**
@@ -230,25 +194,3 @@ python cam_test.py
 - You can disable webcam tracking anytime
 
 ---
-
-## Next Steps
-
-1. **Collect data for 1 week** - Use the app during study sessions
-2. **Label frequently** - Try to label every few minutes
-3. **Aim for balance** - Get roughly equal focused/distracted labels
-4. **Check stats daily:**
-   ```bash
-   curl http://localhost:8000/stats
-   ```
-
-Once you have ~2,000 labeled data points, we'll move to Phase 2: Feature Engineering!
-
----
-
-## Contributing
-
-This is a portfolio project. Feel free to fork and adapt for your own use case.
-
-## License
-
-MIT
