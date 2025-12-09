@@ -1,0 +1,16 @@
+TODO: Create extension icons
+
+For now, the extension will work without icons (Chrome will show a default icon).
+
+To create icons later, you can:
+
+1. Use an online tool like https://www.favicon-generator.org/
+2. Upload a simple logo/image
+3. Download 16x16, 48x48, and 128x128 PNG versions
+4. Name them: icon16.png, icon48.png, icon128.png
+5. Place them in this directory
+
+Or use ImageMagick:
+convert -size 128x128 xc:#3b82f6 -gravity center -pointsize 64 -fill white -annotate +0+0 "D" icon128.png
+convert icon128.png -resize 48x48 icon48.png
+convert icon128.png -resize 16x16 icon16.png

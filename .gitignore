@@ -1,1 +1,47 @@
+# Python
 .venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Database and data files
+data.db
+data.db-journal
+*.db
+*.db-journal
+data_raw/*.csv
+features/*.csv
+
+# ML models
+models/*.pkl
+models/*.joblib
+models/*.h5
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Config files with sensitive data
+config.local.json
+
+# Electron build artifacts
+electron-app/node_modules/
+electron-app/dist/
+electron-app/out/
+
+# Chrome extension builds
+chrome-extension/*.zip

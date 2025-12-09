@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dialed Status</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+    .status {
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+    }
+    .status.error {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+    }
+    .status-text {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+    .indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .indicator.active {
+      background: #22c55e;
+    }
+    .indicator.inactive {
+      background: #ef4444;
+    }
+    .info {
+      font-size: 12px;
+      color: #999;
+      line-height: 1.5;
+    }
+    .link {
+      color: #3b82f6;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dialed Study Tracker</h1>
+
+  <div class="status" id="status">
+    <p class="status-text">
+      <span class="indicator active" id="indicator"></span>
+      <span id="status-text">Tracking active...</span>
+    </p>
+  </div>
+
+  <div class="info">
+    <p>This extension tracks your browser activity to help classify focus vs distraction.</p>
+    <p><strong>Keyboard shortcuts:</strong></p>
+    <p>Ctrl+Shift+D = Distracted<br>
+       Ctrl+Shift+F = Focused</p>
+    <p style="margin-top: 12px;">
+      <a href="#" class="link" id="open-settings">View Settings</a> |
+      <a href="#" class="link" id="check-backend">Check Backend</a>
+    </p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
