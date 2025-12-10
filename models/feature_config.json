@@ -1,0 +1,38 @@
+{
+  "feature_names": [
+    "eye_off_center_mean",
+    "eye_off_center_std",
+    "eye_off_center_max",
+    "blink_rate",
+    "blink_ratio",
+    "head_pitch_mean",
+    "head_pitch_std",
+    "head_yaw_mean",
+    "head_yaw_std",
+    "head_distance_mean",
+    "head_distance_std",
+    "tab_switch_rate",
+    "keypress_rate",
+    "idle_ratio",
+    "domain_newtab",
+    "domain_chatgpt.com",
+    "domain_ibmglobal.avature.net",
+    "domain_github.com",
+    "domain_extensions",
+    "domain_imresizer.com",
+    "domain_www.favicon-generator.org",
+    "domain_www.canva.com",
+    "domain_other"
+  ],
+  "num_features": 23,
+  "model_type": "LightGBM",
+  "metrics": {
+    "roc_auc": 0.9365079365079365,
+    "f1_score": 0.9333333333333333
+  },
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "learning_rate": 0.05
+  }
+}
